@@ -16,6 +16,8 @@ public class GameWindow extends JPanel {
         this.entities.addAll(bubbles);
     }
 
+    public void addBubble(Bubble bubble) { this.entities.add(bubble); }
+
     public void addShooter(Shooter shooter) {
         this.addEntity(shooter);
     }
@@ -31,6 +33,12 @@ public class GameWindow extends JPanel {
 
         for(GameEntity entity: this.entities) {
             entity.draw(graphics2D);
+        }
+    }
+
+    public void update(long dt) {
+        for (GameEntity entity : entities) {
+            entity.update(dt);
         }
     }
 }

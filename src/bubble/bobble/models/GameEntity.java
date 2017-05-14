@@ -7,4 +7,5 @@ import java.awt.*;
  */
 public interface GameEntity {
     void draw(Graphics2D cxt);
+    void update(long dt);
 }
